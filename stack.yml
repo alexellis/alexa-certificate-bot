@@ -1,0 +1,20 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  alexa-cert-bot:
+    lang: node8-express
+    handler: ./alexa-cert-bot
+    image: 192.168.0.35:5000/alexellis2/alexa-cert-bot:0.1
+    environment:
+      gateway_url: http://gateway:8080/
+      write_debug: true
+
+  certinfo:
+    skip_build: true
+    image: stefanprodan/certinfo:0.3.0
+    environment:
+      write_debug: true
+      content_type: application/json
+ 
