@@ -6,7 +6,7 @@ functions:
   alexa-cert-bot:
     lang: node8-express
     handler: ./alexa-cert-bot
-    image: 192.168.0.35:5000/alexellis2/alexa-cert-bot:0.1
+    image: alexellis2/alexa-cert-bot:0.1
     environment:
       gateway_url: http://gateway:8080/
       write_debug: true
