@@ -42,4 +42,15 @@ Create an intent of "checkcert" type and make it take the "website" custom slot
 check {site}
 ```
 
-Alternatively use the JSON model.
+Alternatively use the [JSON model](https://github.com/alexellis/alexa-certificate-bot/blob/master/alexa-model.json).
+
+* Add an endpoint
+
+Paste the TLS-enabled (HTTPS) address into the endpoints page:
+
+HTTPS / Default region:
+
+https://my-test-site.com/function/alexa-cert-bot
+
+Select that your site has a valid development certificate for its sub-domain
+
