@@ -1,0 +1,129 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "certificate bot",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what can I say"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "checkcert",
+                    "slots": [
+                        {
+                            "name": "site",
+                            "type": "website",
+                            "samples": [
+                                "v m ware",
+                                "vee em ware",
+                                "dev net create",
+                                "devnet create",
+                                "amazon",
+                                "vmware",
+                                "the project",
+                                "my homepage",
+                                "homepage",
+                                "openfaaas",
+                                "docker blog",
+                                "dev net",
+                                "devnet",
+                                "my blog",
+                                "blog",
+                                "openfaas"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check {site}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "website",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "docker blog"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dev net"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the project"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "project"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "homepage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "my blog",
+                                "synonyms": [
+                                    "blog"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "openfaas"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "checkcert",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "site",
+                            "type": "website",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.18354440648.244176247456"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.18354440648.244176247456",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what site should I check?"
+                    }
+                ]
+            }
+        ]
+    }
+}
