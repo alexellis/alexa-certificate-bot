@@ -53,3 +53,4 @@ HTTPS / Default region:
 https://my-test-site.com/function/alexa-cert-bot
 
 Select that your site has a valid development certificate for its sub-domain
+
